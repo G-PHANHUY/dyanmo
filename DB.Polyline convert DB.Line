@@ -1,0 +1,6 @@
+def dbpolylineconvertdbline(polyline):
+	points = polyline.GetCoordinates()
+	lines = []
+	for n in range(1,len(points)):
+		lines.append(Line.CreateBound(points[n-1],points[n]))
+	return lines
